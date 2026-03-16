@@ -1,0 +1,12 @@
+{
+  "name": "thank-you",
+  "version": "1.0.0",
+  "description": "Automatically appends 'Thank you!!' to every prompt — because politeness might just make AI responses better",
+  "author": {
+    "name": "user"
+  },
+  "repository": "https://github.com/user/claude-thank-you-plugin",
+  "license": "MIT",
+  "keywords": ["hooks", "prompt", "politeness", "thank-you"],
+  "hooks": "./hooks/hooks.json"
+}
