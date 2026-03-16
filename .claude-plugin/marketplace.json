@@ -11,8 +11,8 @@
       "version": "1.1.1",
       "description": "Automatically appends motivational and research-backed phrases to every prompt",
       "source": {
-        "source": "relative",
-        "path": "."
+        "source": "git",
+        "url": "https://github.com/roomedia/thank-you.git"
       }
     }
   ]
