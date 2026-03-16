@@ -1,0 +1,19 @@
+{
+  "name": "thank-you-marketplace",
+  "description": "Plugins that enhance prompts with helpful phrases",
+  "version": "1.0.0",
+  "owner": {
+    "name": "roomedia"
+  },
+  "plugins": [
+    {
+      "name": "thank-you",
+      "version": "1.1.0",
+      "description": "Automatically appends motivational and research-backed phrases to every prompt",
+      "source": {
+        "source": "relative",
+        "path": "."
+      }
+    }
+  ]
+}
