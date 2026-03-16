@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "thank-you",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "description": "Automatically appends motivational and research-backed phrases to every prompt",
       "source": {
         "source": "git",
