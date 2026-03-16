@@ -1,19 +1,22 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "thank-you-marketplace",
   "description": "Plugins that enhance prompts with helpful phrases",
-  "version": "1.0.0",
   "owner": {
     "name": "roomedia"
   },
   "plugins": [
     {
       "name": "thank-you",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "description": "Automatically appends motivational and research-backed phrases to every prompt",
-      "source": {
-        "source": "git",
-        "url": "https://github.com/roomedia/thank-you.git"
-      }
+      "source": ".",
+      "author": {
+        "name": "roomedia"
+      },
+      "license": "MIT",
+      "keywords": ["hooks", "prompt", "politeness", "thank-you"],
+      "category": "productivity"
     }
   ]
 }
