@@ -1,25 +1,43 @@
 # thank-you
 
-A Claude Code plugin that automatically appends **"Thank you!!"** to every prompt.
+A Claude Code plugin that automatically appends motivational and research-backed phrases to every prompt.
 
-There's [research suggesting](https://www.researchgate.net/publication/386196453_Should_We_Respect_LLMs_A_Cross-Lingual_Study_on_the_Influence_of_Prompt_Politeness_on_LLM_Performance) that politeness in prompts can influence LLM response quality. This plugin lets you test that hypothesis hands-free.
+Rotates through messages like "Thank you!!", "Take a deep breath and think step by step.", "I'll tip you $200 if you get this right!" — all based on [research](https://www.researchgate.net/publication/386196453) suggesting prompt tone can influence LLM response quality.
+
+## Prerequisites
+
+- **jq** — required for message rotation. Without it, the plugin falls back to a fixed "Thank you!!" message.
+  - macOS: `brew install jq`
+  - Ubuntu/Debian: `sudo apt install jq`
+  - Other: https://jqlang.github.io/jq/download/
 
 ## Install
 
 ```bash
+/plugin marketplace add https://github.com/roomedia/thank-you.git
 /plugin install thank-you
 ```
 
-Or add this repository as a marketplace source first:
+## Custom Messages
 
-```bash
-/plugin marketplace add https://github.com/user/claude-thank-you-plugin.git
-/plugin install thank-you
+Create `~/.claude/thank-you.json` to add your own messages to the rotation:
+
+```json
+{
+  "messages": [
+    "화이팅!",
+    "Your custom message here"
+  ]
+}
 ```
 
-## What it does
+Custom messages are merged with the built-in pool.
 
-Every time you submit a prompt, a `UserPromptSubmit` hook appends `Thank you!!` as additional context. That's it.
+## How It Works
+
+- `UserPromptSubmit` hook fires on every prompt
+- Picks the next message from a shuffled pool (no repeats until all are used)
+- State is stored in `~/.claude/.thank-you-state`
 
 ## Uninstall
 
