@@ -14,7 +14,7 @@ Rotates through messages like "Thank you!!", "Take a deep breath and think step 
 ## Install
 
 ```bash
-/plugin marketplace add https://github.com/roomedia/thank-you.git
+/plugin marketplace add https://github.com/roomedia/roomedia-plugins.git
 /plugin install thank-you
 ```
 
